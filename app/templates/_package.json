@@ -1,0 +1,15 @@
+{
+    "name": "<%= name %>",
+    "version": "<%= version %>",
+    "desc": "desc",
+    "tag": [
+        "banner"
+    ],
+    site:"try",
+    width:"990",
+    "cover": "http://img02.taobaocdn.com/tps/i2/T1VDekFmBfXXa8FjEe-xxx-xxx.jpg",
+    "author": {
+        "name": "<%= author %>",
+        "email": "<%= email %>",
+    }
+}
