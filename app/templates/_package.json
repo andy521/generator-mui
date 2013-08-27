@@ -1,13 +1,13 @@
 {
     "name": "<%= name %>",
-    "version": "<%= version %>",
-    "desc": "desc",
+    "version": "1.0.0",
+    "desc": "",
     "tag": [
-        "banner"
+        ""
     ],
-    site:"try",
-    width:"990",
-    "cover": "http://img02.taobaocdn.com/tps/i2/T1VDekFmBfXXa8FjEe-xxx-xxx.jpg",
+    site:"",
+    width:"",
+    "cover": "",
     "author": {
         "name": "<%= author %>",
         "email": "<%= email %>",

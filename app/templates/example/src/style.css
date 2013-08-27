@@ -1,2 +1,18 @@
-.ui-name-status .ui-name-content{}
-.ui-name-status .ui-name-content-status{}
+/* 模块规范详情参看 Alice：http://aliceui.org/docs/rule.html */
+<% if(enableLess) { %>
+/*
+	变量的定义，会用于服务器端的自定义配置，使组件更加灵活。如：
+	
+	颜色设置：
+	@color: blue;
+	@background: #fff;
+	
+	响应式设置：
+	@screen-xm: 480px;
+	@screen-sm: 768px;
+	@screen-md: 992px;
+	@screen-lg: 1200px;
+*/
+<% } %>
+
+/*------ mui.<%= name %> ------*/

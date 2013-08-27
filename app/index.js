@@ -8,7 +8,7 @@ var MuiGenerator = module.exports = function MuiGenerator(args, options, config)
   yeoman.generators.Base.apply(this, arguments);
 
   this.on('end', function () {
-    this.installDependencies({ skipInstall: options['skip-install'] });
+    //this.installDependencies({ skipInstall: options['skip-install'] });
   });
 
   this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
@@ -19,45 +19,65 @@ util.inherits(MuiGenerator, yeoman.generators.Base);
 MuiGenerator.prototype.askFor = function askFor() {
   var cb = this.async();
 
-  // have Yeoman greet the user.
-  console.log(this.yeoman);
+  var logo =      
+    '                   _   \n' +
+    '   _ __ ___  _   _(_)  \n' +
+    '  | \'_ ` _ \\| | | | |\n' +
+    '  | | | | | | |_| | |  \n' + 
+    '  |_| |_| |_|\\__,_|_| \n' +
+    'Welcome to Yeoman. Start your component with mui!\n';
 
+  console.log(logo);
+  var defaultConfig = {
+    name: 'Component',
+    style: 'css',
+    author: '',
+    email: ''
+  };
   var prompts = [{
     name: 'name',
-    message: 'component name:',
+    message: 'Component\'s name:',
+    default: defaultConfig.name,
+  },{
+    name: 'style',
+    message: 'Style Engine[less](default:css):',
+    default: defaultConfig.style,
   },{
     name: 'author',
     message: 'Author\'s name:',
+    default: defaultConfig.author
   },{
     name: 'email',
     message: 'Author\'s email:',
-  },{
-    name: 'version',
-    message: 'Version:',
+    default: defaultConfig.email
   }];
 
   this.prompt(prompts, function (props) {
+
     this.name = props.name;
     this.author = props.author;
     this.email = props.email;
-    this.version = props.version;
+    this.style = props.style.toLowerCase();
+    this.enableLess = (/less/i).test(this.style);
+    if(!this.enableLess){
+      this.style = defaultConfig.style;
+    }
+    
     cb();
   }.bind(this));
 };
 
 MuiGenerator.prototype.app = function app() {
+  var src = path.join(this.name,'src');
+  var templates = path.join(this.name,'templates');
+
   this.mkdir(this.name);
-  this.mkdir(this.name+'/src');
-  this.mkdir(this.name+'/templates');
-  this.copy('example/src/index.js', this.name+'/src/index.js');
-  this.copy('example/src/style.css', this.name+'/src/style.css');
-  this.copy('example/templates/index.html', this.name+'/templates/index.html');
+  this.mkdir(src);
+  this.mkdir(templates);
 
-  this.copy('_README.md', this.name + '/README.md');
-  this.template('_package.json', this.name + '/package.json');
-};
-
-MuiGenerator.prototype.projectfiles = function projectfiles() {
-  this.copy('editorconfig', this.name + '/.editorconfig');
-  this.copy('jshintrc', this.name + '/.jshintrc');
+  this.template('example/src/index.js', path.join(src,'index.js'));
+  this.copy('example/src/style.css', path.join(src,'style.'+this.style));
+  this.template('example/templates/index.html', path.join(templates, 'index.html'));
+  this.copy('_README.md', path.join(this.name,'README.md'));
+  this.template('_package.json', path.join(this.name,'package.json'));
 };

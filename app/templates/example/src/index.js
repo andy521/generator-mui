@@ -2,21 +2,21 @@ KISSY.add(function(S, Node, Base) {
     var EMPTY = '';
     var $ = Node.all;
     /**
-     * @name ImageZoom
-     * @class 图片放大器
-     * @since 1.4
+     * @name <%= name %>
+     * @class <%= name %>
+     * @since 1.0.0
      * @constructor
      * @extends Base
      */
-    function ImageZoom(config) {
+    function <%= name %>(config) {
         var self = this;
         //调用父类构造函数
-        ImageZoom.superclass.constructor.call(self, config);
+        <%= name %>.superclass.constructor.call(self, config);
     }
-    S.extend(ImageZoom, Base, /** @lends ImageZoom.prototype*/{
+    S.extend(<%= name %>, Base, /** @lends <%= name %>.prototype*/{
 
-    }, {ATTRS : /** @lends ImageZoom*/{
+    }, {ATTRS : /** @lends <%= name %>*/{
 
     }});
-    return ImageZoom;
+    return <%= name %>;
 }, {requires : ['node','base']});

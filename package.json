@@ -3,19 +3,20 @@
   "version": "1.0.0",
   "description": "A generator for Yeoman",
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "mui"
   ],
-  "homepage": "https://github.com/someuser/generator-mui",
-  "bugs": "https://github.com/someuser/generator-mui/issues",
+  "homepage": "https://github.com/Yokubee/generator-mui",
+  "bugs": "https://github.com/Yokubee/generator-mui/issues",
   "author": {
-    "name": "",
-    "email": "",
-    "url": "https://github.com/someuser"
+    "name": "Yokubee",
+    "email": "yokubee0120@gmail.com",
+    "url": "https://github.com/Yokubee"
   },
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/someuser/generator-mui.git"
+    "url": "git://github.com/Yokubee/generator-mui.git"
   },
   "scripts": {
     "test": "mocha"
