@@ -6,7 +6,9 @@ var yeoman = require('yeoman-generator');
 
 var MuiGenerator = module.exports = function MuiGenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
-
+  console.log(args);
+  console.log(options);
+  console.log(config);
   this.on('end', function () {
     //this.installDependencies({ skipInstall: options['skip-install'] });
   });
@@ -39,9 +41,10 @@ MuiGenerator.prototype.askFor = function askFor() {
     message: 'Component\'s name:',
     default: defaultConfig.name,
   },{
+    type: 'list',
     name: 'style',
-    message: 'Style Engine[less](default:css):',
-    default: defaultConfig.style,
+    message: 'Choice style engine:',
+    choices: ['css', 'less']
   },{
     name: 'author',
     message: 'Author\'s name:',

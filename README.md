@@ -6,7 +6,10 @@ A generator for [Yeoman](http://yeoman.io).
 
 Install
 ```
-$ npm install -g yo grunt-cli generator-mui
+// yeoman
+$ npm install -g yo grunt-cli
+// generator
+$ npm generator-mui
 ```
 Initialize
 ```
