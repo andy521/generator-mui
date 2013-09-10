@@ -1,4 +1,3 @@
-/* 模块规范详情参看 Alice：http://aliceui.org/docs/rule.html */
 <% if(enableLess) { %>
 /*
 	变量的定义，会用于服务器端的自定义配置，使组件更加灵活。如：
