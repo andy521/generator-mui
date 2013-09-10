@@ -5,8 +5,6 @@
     "tag": [
         ""
     ],
-    site:"",
-    width:"",
     "cover": "",
     "author": {
         "name": "<%= author %>",
