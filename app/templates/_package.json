@@ -8,6 +8,6 @@
     "cover": "",
     "author": {
         "name": "<%= author %>",
-        "email": "<%= email %>",
+        "email": "<%= email %>"
     }
 }
