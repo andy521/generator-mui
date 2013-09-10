@@ -86,6 +86,6 @@ MuiGenerator.prototype.app = function app() {
     this.copy('example/templates/index.html', path.join(templates, 'index.html'));
     this.copy('example/templates/index.php', path.join(templates, 'index.php'));
     this.copy('example/templates/index.vm', path.join(templates, 'index.vm'));
-    this.copy('_README.md', path.join(this.name, 'README.md'));
+    this.template('_README.md', path.join(this.name, 'README.md'));
     this.template('_package.json', path.join(this.name, 'package.json'));
 };
