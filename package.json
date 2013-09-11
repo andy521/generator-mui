@@ -1,42 +1,42 @@
 {
-  "name": "generator-mui",
-  "version": "1.0.0",
-  "description": "A generator for Yeoman",
-  "keywords": [
-    "yeoman-generator",
-    "mui"
-  ],
-  "homepage": "https://github.com/Yokubee/generator-mui",
-  "bugs": "https://github.com/Yokubee/generator-mui/issues",
-  "author": {
-    "name": "Yokubee",
-    "email": "yokubee0120@gmail.com",
-    "url": "https://github.com/Yokubee"
-  },
-  "main": "app/index.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/Yokubee/generator-mui.git"
-  },
-  "scripts": {
-    "test": "mocha"
-  },
-  "dependencies": {
-    "yeoman-generator": "~0.13.0"
-  },
-  "devDependencies": {
-    "mocha": "~1.12.0"
-  },
-  "peerDependencies": {
-    "yo": ">=1.0.0-rc.1"
-  },
-  "engines": {
-    "node": ">=0.8.0",
-    "npm": ">=1.2.10"
-  },
-  "licenses": [
-    {
-      "type": "MIT"
-    }
-  ]
+    "name": "generator-mui",
+    "version": "1.0.0",
+    "description": "Yeoman generator for mui.",
+    "keywords": [
+        "yeoman-generator",
+        "mui"
+    ],
+    "homepage": "https://github.com/Yokubee/generator-mui",
+    "bugs": "https://github.com/Yokubee/generator-mui/issues",
+    "author": {
+        "name": "yokubee",
+        "email": "yokubee0120@gmail.com",
+        "url": "https://github.com/Yokubee"
+    },
+    "main": "app/index.js",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/Yokubee/generator-mui.git"
+    },
+    "scripts": {
+        "test": "mocha"
+    },
+    "dependencies": {
+        "yeoman-generator": "~0.13.0"
+    },
+    "devDependencies": {
+        "mocha": "~1.12.0"
+    },
+    "peerDependencies": {
+        "yo": ">=1.0.0-rc.1"
+    },
+    "engines": {
+        "node": ">=0.8.0",
+        "npm": ">=1.2.10"
+    },
+    "licenses": [
+        {
+            "type": "MIT"
+        }
+    ]
 }
