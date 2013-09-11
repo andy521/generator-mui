@@ -9,7 +9,7 @@ Install
 // yeoman
 $ npm install -g yo grunt-cli
 // generator
-$ npm generator-mui
+$ npm install generator-mui
 ```
 Initialize
 ```
