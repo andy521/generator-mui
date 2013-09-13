@@ -5,7 +5,7 @@
     "tag": [
         ""
     ],
-    "cover": "",
+    "cover": "http://gtms03.alicdn.com/tps/i3/T1_myRFlBdXXaPtTHS-270-200.png",
     "author": {
         "name": "<%= author %>",
         "email": "<%= email %>"
