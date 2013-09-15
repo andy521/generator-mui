@@ -75,6 +75,7 @@ MuiGenerator.prototype.askFor = function askFor() {
 MuiGenerator.prototype.app = function app() {
     var src = path.join(this.name, 'src');
     var templates = path.join(this.name, 'templates');
+    var demo = path.join(this.name, 'demo');
 
     this.mkdir(this.name);
     this.mkdir(src);
@@ -86,6 +87,7 @@ MuiGenerator.prototype.app = function app() {
     this.copy('example/templates/index.html', path.join(templates, 'index.html'));
     this.copy('example/templates/index.php', path.join(templates, 'index.php'));
     this.copy('example/templates/index.vm', path.join(templates, 'index.vm'));
+    this.template('example/demo/index.html', path.join(demo, 'index.html'));
     this.template('_README.md', path.join(this.name, 'README.md'));
     this.template('_package.json', path.join(this.name, 'package.json'));
 };
